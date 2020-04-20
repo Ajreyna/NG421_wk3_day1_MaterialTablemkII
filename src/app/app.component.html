@@ -1,7 +1,7 @@
 <h1>AmazonClone </h1>
 
 <mat-form-field> 
-  <input matInput placeholder="filter" type ="text">
+  <input matInput placeholder="filter" type ="text" (keyup)="applyFilter($event.target.value)">
 </mat-form-field>
 
 <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8" width="75%">

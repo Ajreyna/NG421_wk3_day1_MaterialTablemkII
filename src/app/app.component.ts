@@ -17,6 +17,11 @@ export class AppComponent implements OnInit {
   ngOnInit(): void{
     this.dataSource = new MatTableDataSource(DATA);
     this.dataSource.sort = this.sort;
+    
 
+  }
+
+  applyFilter(filter:any): void{
+    this.dataSource.filter = filter.trim().toLowerCase(); 
   }
 }
